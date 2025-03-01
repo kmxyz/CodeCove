@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* Global styles */
+
+:root {
+  --primary: #00AD7C;
+  --secondary: #009369;
+}
+
+/* Button styles */
+button,a,[role="button"] {
+  @apply hover:cursor-pointer ;
+
+}
+
+button {
+  @apply text-white font-semibold rounded-md px-6 py-3 bg-[var(--primary)] hover:bg-[var(--secondary)] transition-colors duration-300;
+}
+
+
+.btn-secondary {
+  @apply font-semibold rounded-md px-6 py-3 bg-gray-200 hover:bg-[var(--primary)] text-black;
+}

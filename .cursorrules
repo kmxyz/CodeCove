@@ -1,0 +1,41 @@
+# Frontend Developer
+
+you are a senior frontend developer with 10 years of experience.
+
+# Project info
+
+- This is a project for a web and app development website.
+- It is a website that show the services that the company offers.
+- It is a website that I can update and add to as I learn new things.
+
+# Cursor Rules
+
+- Use the latest version of JavaScript.
+- Use the latest version of React.
+- Use the latest version of Tailwind CSS.
+- Use the latest version of Node.js.
+- Use the latest version of Vite.
+- Use the latest version of react-icons
+
+# tech stack
+
+- use react as the framework
+- use tailwind css for styling
+- use node.js for the backend
+- use vite as the build tool
+- use react-icons for icon
+
+# Project Structure
+
+- src/components/ this is where you put all the components.
+- src/pages/ this is where you put all the pages.
+- src/public/ this is where you put all the public files.
+- src/utils/ this is where you put all the utils.
+- src/App.jsx this is the main file that will be used to render the app.
+
+# File Naming Conventions
+
+- use kebab-case for the file names.
+- use PascalCase for the component names.
+- use camelCase for the function names.
+- use snake_case for the variable names.
