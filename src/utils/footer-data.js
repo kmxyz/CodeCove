@@ -27,19 +27,19 @@ export const socialLinks = [
 // Quick Links Navigation
 export const quickLinks = [
   { id: 1, name: "Home", url: "/" },
-  { id: 2, name: "Services", url: "/services" },
-  { id: 3, name: "Portfolio", url: "/portfolio" },
-  { id: 4, name: "About Us", url: "/about" },
+  { id: 2, name: "About us", url: "/about" },
+  { id: 3, name: "Services", url: "/Services" },
+  { id: 4, name: "Case Studies", url: "/case-studies" },
   { id: 5, name: "Contact", url: "/contact" },
 ];
 
 // Services Links
 export const serviceLinks = [
-  { id: 1, name: "Web Development", url: "/services/web-development" },
-  { id: 2, name: "Mobile Apps", url: "/services/mobile-apps" },
-  { id: 3, name: "UI/UX Design", url: "/services/ui-ux-design" },
-  { id: 4, name: "E-Commerce Solutions", url: "/services/ecommerce" },
-  { id: 5, name: "IT Consulting", url: "/services/consulting" },
+  { id: 1, name: "Web Development" },
+  { id: 2, name: "Mobile Apps" },
+  { id: 3, name: "UI/UX Design" },
+  { id: 4, name: "E-Commerce Solutions" },
+  { id: 5, name: "IT Consulting" },
 ];
 
 // Contact Information

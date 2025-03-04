@@ -1,6 +1,12 @@
 import React from "react";
 
 const Hero = () => {
+  const handleOnClick = () => {
+    const servicesSection = document.getElementById("services");
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-4 flex flex-col lg:flex-row items-center">
@@ -28,8 +34,10 @@ const Hero = () => {
             complexity or sky-high costs.
           </p>
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            <button className="">Join Us</button>
-            <button className="btn-secondary">Read more</button>
+            <button className="">Make your own website</button>
+            <button className="btn-secondary" onClick={handleOnClick}>
+              Read more
+            </button>
           </div>
         </div>
       </div>

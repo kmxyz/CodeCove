@@ -36,7 +36,7 @@ const Services = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div id="services" className="bg-white">
       {/* Services Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">

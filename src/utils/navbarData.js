@@ -23,12 +23,6 @@ const navbarItems = [
     path: "/case-studies",
     isActive: false,
   },
-  {
-    id: 5,
-    title: "How it Works",
-    path: "/how-it-works",
-    isActive: false,
-  },
 ];
 
 export default navbarItems;

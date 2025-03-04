@@ -41,20 +41,28 @@ const Navbar = () => {
 
       {/* Contact Button */}
       <div className="hidden md:block">
-        <button className="">Contact us</button>
+        <Link to="/contact">
+          <button className="">Contact us</button>
+        </Link>
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="md:hidden">
+      <div className="md:hidden ">
         <button
           onClick={toggleMenu}
           className={`text-gray-600 focus:outline-none `}
         >
-          {isMenuOpen ? (
-            <IoMdClose className="w-6 h-6 " />
-          ) : (
-            <FaBars className="w-6 h-6" />
-          )}
+          <div
+            className={`w-6 h-6 transition-all duration-300 ease-in-out ${
+              isMenuOpen ? "rotate-90" : ""
+            }`}
+          >
+            {isMenuOpen ? (
+              <IoMdClose className="w-6 h-6 " />
+            ) : (
+              <FaBars className="w-6 h-6" />
+            )}
+          </div>
         </button>
       </div>
 
@@ -71,6 +79,7 @@ const Navbar = () => {
           <Link
             key={item.id}
             to={item.path}
+            onClick={toggleMenu}
             className={`transition-transform duration-300 hover:translate-x-2 ${
               item.isActive
                 ? "font-bold text-[var(--primary)]"
@@ -80,7 +89,11 @@ const Navbar = () => {
             {item.title}
           </Link>
         ))}
-        <button className="w-full">Contact us</button>
+        <Link to="/contact">
+          <button className="w-full" onClick={toggleMenu}>
+            Contact us
+          </button>
+        </Link>
       </div>
     </nav>
   );

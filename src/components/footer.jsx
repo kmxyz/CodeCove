@@ -12,10 +12,10 @@ const Footer = () => {
 
   return (
     <footer className="bg-slate-900 text-white py-10">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="">
             <h3 className="text-xl font-bold mb-4">{companyInfo.name}</h3>
             <p className="mb-4 text-slate-300">{companyInfo.description}</p>
             <div className="flex space-x-4">
@@ -33,9 +33,9 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="">
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 ">
               {quickLinks.map((link) => (
                 <li key={link.id}>
                   <a
@@ -50,24 +50,19 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="">
             <h3 className="text-xl font-bold mb-4">Our Services</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 ">
               {serviceLinks.map((service) => (
-                <li key={service.id}>
-                  <a
-                    href={service.url}
-                    className="text-slate-300 hover:text-white transition-colors"
-                  >
-                    {service.name}
-                  </a>
+                <li key={service.id} className="text-slate-300 ">
+                  {service.name}
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="">
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <div className="space-y-3">
               {contactInfo.map((contact) => (
