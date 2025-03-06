@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import navbarItems from "../utils/navbarData";
+import navbarItems from "../utils/component/navbarData";
 import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 

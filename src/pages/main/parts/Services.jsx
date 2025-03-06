@@ -1,6 +1,6 @@
 import React from "react";
-import serviceCardData from "../../../utils/serviceCardData";
-import featuresData from "../../../utils/featuresData";
+import serviceCardData from "../../../utils/main/serviceCardData";
+import featuresData from "../../../utils/main/featuresData";
 import { FaCode, FaMobileAlt, FaPalette, FaChevronRight } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import { IoRefreshOutline } from "react-icons/io5";

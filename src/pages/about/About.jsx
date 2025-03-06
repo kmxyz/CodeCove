@@ -3,7 +3,7 @@ import {
   workApproach,
   coreValues,
   expertise,
-} from "../../utils/aboutData";
+} from "../../utils/about/aboutData";
 import { Link } from "react-router-dom";
 
 const About = () => {

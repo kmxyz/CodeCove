@@ -1,6 +1,6 @@
 import React from "react";
-import statsData from "../../../utils/statsData";
-import techStackData from "../../../utils/techStackData";
+import statsData from "../../../utils/main/statsData";
+import techStackData from "../../../utils/main/techStackData";
 
 const Stats = () => {
   return (

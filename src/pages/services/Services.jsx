@@ -1,5 +1,5 @@
 import React from "react";
-import { servicesData } from "../../utils/servicesPageData";
+import { servicesData } from "../../utils/services/servicesPageData";
 import { Link } from "react-router-dom";
 import { FaArrowRight, FaCheck } from "react-icons/fa";
 

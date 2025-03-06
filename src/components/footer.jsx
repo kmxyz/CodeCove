@@ -5,7 +5,7 @@ import {
   serviceLinks,
   contactInfo,
   companyInfo,
-} from "../utils/footer-data";
+} from "../utils/component/footer-data";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
