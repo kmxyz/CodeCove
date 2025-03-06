@@ -20,7 +20,7 @@ const navbarItems = [
     path: "/case-studies",
   },*/
   {
-    id: 5,
+    id: 4,
     title: "Contact",
     path: "/contact",
   },

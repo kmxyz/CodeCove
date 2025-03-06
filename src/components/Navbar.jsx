@@ -59,7 +59,7 @@ const Navbar = () => {
 
       {/* Contact Button */}
       <div className="hidden md:block">
-        <Link to="/contact" onClick={() => handleItemClick(5)}>
+        <Link to="/contact" onClick={() => handleItemClick(4)}>
           <button className="">Contact us</button>
         </Link>
       </div>
@@ -108,7 +108,7 @@ const Navbar = () => {
           </Link>
         ))}
         <Link to="/contact">
-          <button className="w-full" onClick={() => handleItemClick(5)}>
+          <button className="w-full" onClick={() => handleItemClick(4)}>
             Contact us
           </button>
         </Link>

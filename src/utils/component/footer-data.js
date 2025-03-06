@@ -28,9 +28,9 @@ export const socialLinks = [
 export const quickLinks = [
   { id: 1, name: "Home", url: "/" },
   { id: 2, name: "About us", url: "/about" },
-  { id: 3, name: "Services", url: "/Services" },
+  { id: 3, name: "Services", url: "/services" },
   //{ id: 4, name: "Case Studies", url: "/case-studies" },
-  { id: 5, name: "Contact", url: "/contact" },
+  { id: 4, name: "Contact", url: "/contact" },
 ];
 
 // Services Links
