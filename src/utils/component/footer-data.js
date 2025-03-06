@@ -54,7 +54,7 @@ export const contactInfo = [
 
 // Company Information
 export const companyInfo = {
-  name: "WebApp Developers",
+  name: "CodeCove Developers",
   description:
     "We create stunning web and mobile applications tailored to your business needs.",
 };

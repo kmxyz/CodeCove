@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="logo">
         <Link to="/">
           <div className="text-2xl font-bold bg-gradient-to-r from-white to-[var(--primary)] text-transparent bg-clip-text">
-            WebApp
+            CodeCove
           </div>
         </Link>
       </div>
