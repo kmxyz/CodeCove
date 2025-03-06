@@ -14,11 +14,11 @@ const navbarItems = [
     title: "Services",
     path: "/services",
   },
-  {
+  /*{
     id: 4,
     title: "Case Studies",
     path: "/case-studies",
-  },
+  },*/
   {
     id: 5,
     title: "Contact",
