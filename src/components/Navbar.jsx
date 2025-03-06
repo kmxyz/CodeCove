@@ -6,9 +6,15 @@ import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState(1);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleItemClick = (id) => {
+    setActiveItem(id);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -27,9 +33,10 @@ const Navbar = () => {
         {navbarItems.map((item) => (
           <Link
             key={item.id}
+            onClick={() => handleItemClick(item.id)}
             to={item.path}
             className={`transition-transform duration-300 hover:scale-110 ${
-              item.isActive
+              item.id === activeItem
                 ? "font-bold text-[var(--primary)]"
                 : "text-gray-600 hover:text-[var(--primary)] transition-colors duration-300 font-medium"
             }`}
@@ -41,7 +48,7 @@ const Navbar = () => {
 
       {/* Contact Button */}
       <div className="hidden md:block">
-        <Link to="/contact">
+        <Link to="/contact" onClick={() => handleItemClick(5)}>
           <button className="">Contact us</button>
         </Link>
       </div>
@@ -79,9 +86,9 @@ const Navbar = () => {
           <Link
             key={item.id}
             to={item.path}
-            onClick={toggleMenu}
+            onClick={() => handleItemClick(item.id)}
             className={`transition-transform duration-300 hover:translate-x-2 ${
-              item.isActive
+              item.id === activeItem
                 ? "font-bold text-[var(--primary)]"
                 : "text-gray-600 hover:text-[var(--primary)] transition-colors duration-300"
             }`}
@@ -90,7 +97,7 @@ const Navbar = () => {
           </Link>
         ))}
         <Link to="/contact">
-          <button className="w-full" onClick={toggleMenu}>
+          <button className="w-full" onClick={() => handleItemClick(5)}>
             Contact us
           </button>
         </Link>

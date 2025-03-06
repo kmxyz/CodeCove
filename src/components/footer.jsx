@@ -68,7 +68,9 @@ const Footer = () => {
               {contactInfo.map((contact) => (
                 <div key={contact.id} className="flex items-center gap-2">
                   <contact.icon className="text-slate-300" size={20} />
-                  <span className="text-slate-300">{contact.text}</span>
+                  <a className="text-slate-300" href={`mailto:${contact.text}`}>
+                    {contact.text}
+                  </a>
                 </div>
               ))}
             </div>

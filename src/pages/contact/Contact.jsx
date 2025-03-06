@@ -58,36 +58,41 @@ const Contact = () => {
               <div className="mt-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-bold text-[#00054B] mb-2">
+                    <h3 className="text-xl font-bold text-[var(--primary)] mb-2">
                       Contact
                     </h3>
-                    <p className="text-[#00054B]">markapple666@gmail.com</p>
+                    <a
+                      className="text-[var(--primary)]"
+                      href={`mailto:markapple666@gmail.com`}
+                    >
+                      markapple666@gmail.com
+                    </a>
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold text-[#00054B] mb-2">
+                    <h3 className="text-xl font-bold text-[var(--primary)] mb-2">
                       Based in
                     </h3>
-                    <p className="text-[#00054B]">NS, Canada</p>
+                    <p className="text-[var(--primary)]">NS, Canada</p>
                   </div>
                 </div>
 
                 <div className="mt-8 flex space-x-6">
                   <a
                     href="#"
-                    className="text-[#00054B] hover:text-[#000a75] text-2xl"
+                    className="text-[var(--primary)] hover:text-[var(--secondary)] text-2xl"
                   >
                     <FaFacebook />
                   </a>
                   <a
                     href="#"
-                    className="text-[#00054B] hover:text-[#000a75] text-2xl"
+                    className="text-[var(--primary)] hover:text-[var(--secondary)] text-2xl"
                   >
                     <FaInstagram />
                   </a>
                   <a
                     href="#"
-                    className="text-[#00054B] hover:text-[#000a75] text-2xl"
+                    className="text-[var(--primary)] hover:text-[var(--secondary)] text-2xl"
                   >
                     <FaTwitter />
                   </a>

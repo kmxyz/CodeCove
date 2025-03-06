@@ -5,7 +5,7 @@ import { FaCode, FaMobileAlt, FaPalette, FaChevronRight } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import { IoRefreshOutline } from "react-icons/io5";
 import { FaUsers } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 const Services = () => {
   // Function to determine which icon to use based on service title
   const getServiceIcon = (title) => {
@@ -115,7 +115,9 @@ const Services = () => {
                   </div>
                 ))}
               </div>
-              <button className="mt-8">Get Started Today</button>
+              <Link to="/contact">
+                <button className="mt-8">Get Started Today</button>
+              </Link>
             </div>
           </div>
         </div>
