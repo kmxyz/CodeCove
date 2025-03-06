@@ -1,3 +1,3 @@
 # My Project
 
-This project is used for WebApp.
+This project is used for CodeCove.
