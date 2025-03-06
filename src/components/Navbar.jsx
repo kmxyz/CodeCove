@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import navbarItems from "../utils/component/navbarData";
 import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
@@ -7,6 +7,17 @@ import { IoMdClose } from "react-icons/io";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(1);
+  const location = useLocation();
+
+  // Update active item based on current path
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const activeNavItem = navbarItems.find((item) => item.path === currentPath);
+
+    if (activeNavItem) {
+      setActiveItem(activeNavItem.id);
+    }
+  }, [location.pathname]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

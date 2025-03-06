@@ -62,13 +62,13 @@ const Services = () => {
                 {service.title}
               </h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
-              <a
-                href="#"
+              <Link
+                to="/services"
                 className="text-[var(--primary)] font-medium hover:underline inline-flex items-center"
               >
                 Learn More
                 <FaChevronRight className="w-4 h-4 ml-2" />
-              </a>
+              </Link>
             </div>
           ))}
         </div>

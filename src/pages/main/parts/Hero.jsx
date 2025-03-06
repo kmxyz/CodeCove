@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Hero = () => {
   const handleOnClick = () => {
     const servicesSection = document.getElementById("services");
@@ -34,7 +34,9 @@ const Hero = () => {
             complexity or sky-high costs.
           </p>
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            <button className="">Make your own website</button>
+            <Link to="/contact">
+              <button className="">Make your own website</button>
+            </Link>
             <button className="btn-secondary" onClick={handleOnClick}>
               Read more
             </button>

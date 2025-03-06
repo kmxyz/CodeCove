@@ -23,9 +23,11 @@ const Cta = () => {
                   Get a Free Consultation
                 </button>
               </Link>
-              <button className="bg-transparent border-2 border-white hover:bg-white hover:text-[var(--primary)]">
-                View Our Portfolio
-              </button>
+              <Link to="/about  ">
+                <button className="bg-transparent border-2 border-white hover:bg-white hover:text-[var(--primary)]">
+                  View Our Portfolio
+                </button>
+              </Link>
             </div>
           </div>
         </div>
