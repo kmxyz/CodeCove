@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 import Main from "./pages/main/main";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
+import Services from "./pages/services/Services";
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
           </Routes>
         </div>
         <Footer />
