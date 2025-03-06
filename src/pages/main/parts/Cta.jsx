@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Cta = () => {
   return (
     <>
@@ -17,9 +18,11 @@ const Cta = () => {
               for your business
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-              <button className="bg-white text-[var(--primary)] hover:bg-gray-100">
-                Get a Free Consultation
-              </button>
+              <Link to="/contact">
+                <button className="bg-white text-[var(--primary)] hover:bg-gray-100">
+                  Get a Free Consultation
+                </button>
+              </Link>
               <button className="bg-transparent border-2 border-white hover:bg-white hover:text-[var(--primary)]">
                 View Our Portfolio
               </button>
