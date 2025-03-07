@@ -19,7 +19,7 @@ export const socialLinks = [
   {
     id: 3,
     icon: FaInstagram,
-    url: "https://instagram.com",
+    url: "https://www.instagram.com/codecove88/",
     ariaLabel: "Instagram",
   },
 ];

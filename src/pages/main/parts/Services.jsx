@@ -6,6 +6,8 @@ import { FaCheck } from "react-icons/fa";
 import { IoRefreshOutline } from "react-icons/io5";
 import { FaUsers } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import featuresImage from "../../../assets/features-image.jpg";
+
 const Services = () => {
   // Function to determine which icon to use based on service title
   const getServiceIcon = (title) => {
@@ -83,7 +85,7 @@ const Services = () => {
               <div className="relative">
                 <div className="absolute -top-6 -left-6 w-32 h-32 bg-[var(--primary)] opacity-10 rounded-full"></div>
                 <img
-                  src="./src/assets/features-image.jpg"
+                  src={featuresImage}
                   alt="Team working on web development"
                   className="rounded-4xl shadow-xl relative z-10 w-160"
                   onError={(e) =>

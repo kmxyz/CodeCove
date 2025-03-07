@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import heroImage from "../../../assets/hero.jpg";
+
 const Hero = () => {
   const handleOnClick = () => {
     const servicesSection = document.getElementById("services");
@@ -15,7 +17,7 @@ const Hero = () => {
           <div className="w-full h-full bg-[#E9F9FB] rounded-tl-[80px] overflow-hidden">
             {/* Background decoration - light blue area with rounded corner */}
             <img
-              src="./src/assets/hero.jpg"
+              src={heroImage}
               alt="Elderly couple in park with bench"
               className="w-full h-full object-contain"
             />
