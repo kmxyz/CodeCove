@@ -21,3 +21,18 @@ button {
 .btn-secondary {
   @apply font-semibold rounded-md px-6 py-3 bg-gray-200 hover:bg-[var(--primary)] text-black;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}

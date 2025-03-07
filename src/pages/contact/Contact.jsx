@@ -1,7 +1,74 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import contact from "../../assets/contact.jpg";
+import { doc, setDoc } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const Contact = () => {
+  // Import the functions you need from the SDKs you need
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBBYiHS0gtqhwVEmLz8kaxqFybIYFarC8w",
+    authDomain: "codecove-a5e04.firebaseapp.com",
+    projectId: "codecove-a5e04",
+    storageBucket: "codecove-a5e04.firebasestorage.app",
+    messagingSenderId: "995728429909",
+    appId: "1:995728429909:web:7a67797f3eda3176dbd5dc",
+    measurementId: "G-K01L4DE5N3",
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validate form data before submission
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    try {
+      const cleanFormData = {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        message: formData.message,
+      };
+
+      console.log(cleanFormData);
+      await setDoc(doc(db, "messages", formData.name), cleanFormData);
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+      navigate("/submission-success");
+    } catch (error) {
+      console.error("Error sending message: ", error);
+      alert("Error sending message. Please try again.");
+    }
+  };
+
   return (
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4">
@@ -22,10 +89,13 @@ const Contact = () => {
                 Contact Us
               </h1>
 
-              <form className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Full Name"
                     className="w-full px-4 border-2 rounded-md border-[var(--primary)]  bg-transparent py-2 focus:outline-none"
                   />
@@ -34,6 +104,9 @@ const Contact = () => {
                 <div>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="E-mail"
                     className="w-full px-4 border-2 rounded-md border-[var(--primary)]  bg-transparent py-2 focus:outline-none"
                   />
@@ -44,6 +117,9 @@ const Contact = () => {
                     placeholder="Message"
                     rows="4"
                     className="w-full px-4 border-2 rounded-md border-[var(--primary)]  bg-transparent py-2 focus:outline-none resize-none"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
 

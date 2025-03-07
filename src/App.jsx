@@ -6,6 +6,7 @@ import Main from "./pages/main/main";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
 import Services from "./pages/services/Services";
+import SubmissionSuccess from "./components/SubmissionSuccess";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/submission-success" element={<SubmissionSuccess />} />
           </Routes>
         </div>
         <Footer />
