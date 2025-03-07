@@ -4,8 +4,12 @@ import contact from "../../assets/contact.jpg";
 import { doc, setDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import {
+  sendContactNotification,
+  initEmailJS,
+} from "../../backend/emailService";
 
 const Contact = () => {
   // Import the functions you need from the SDKs you need
@@ -27,11 +31,18 @@ const Contact = () => {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
+  // Initialize EmailJS
+  useEffect(() => {
+    initEmailJS();
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const navigate = useNavigate();
 
@@ -48,6 +59,8 @@ const Contact = () => {
       return;
     }
 
+    setIsSubmitting(true);
+
     try {
       const cleanFormData = {
         name: formData.name.trim(),
@@ -56,7 +69,12 @@ const Contact = () => {
       };
 
       console.log(cleanFormData);
+      // Save message to Firebase
       await setDoc(doc(db, "messages", formData.name), cleanFormData);
+
+      // Send email notification
+      await sendContactNotification(cleanFormData);
+
       setFormData({
         name: "",
         email: "",
@@ -64,8 +82,10 @@ const Contact = () => {
       });
       navigate("/submission-success");
     } catch (error) {
-      console.error("Error sending message: ", error);
+      console.error("Error processing message: ", error);
       alert("Error sending message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -125,9 +145,10 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="bg-[var(--primary)] text-white py-3 px-8 rounded-full font-medium hover:bg-[var(--secondary)] transition-colors duration-300"
+                  disabled={isSubmitting}
+                  className="bg-[var(--primary)] text-white py-3 px-8 rounded-full font-medium hover:bg-[var(--secondary)] transition-colors duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Submit
+                  {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
               </form>
 
