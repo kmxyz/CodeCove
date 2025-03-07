@@ -134,7 +134,7 @@ const Contact = () => {
 
                 <div>
                   <textarea
-                    placeholder="Message"
+                    placeholder="Please let me know how I can help you"
                     rows="4"
                     className="w-full px-4 border-2 rounded-md border-[var(--primary)]  bg-transparent py-2 focus:outline-none resize-none"
                     name="message"
