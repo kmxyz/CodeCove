@@ -33,7 +33,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="logo">
         <Link to="/">
-          <div className="text-2xl font-bold bg-gradient-to-r from-white to-[var(--primary)] text-transparent bg-clip-text">
+          <div className="text-2xl font-bold bg-gradient-to-r text-[var(--primary)] bg-clip-text">
             CodeCove
           </div>
         </Link>
