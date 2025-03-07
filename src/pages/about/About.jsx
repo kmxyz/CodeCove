@@ -19,10 +19,6 @@ const About = () => {
             <p className="text-xl md:text-2xl mb-8">{companyInfo.mission}</p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 basis-full md:basis-[calc(50%-1rem)]">
-                <h3 className="text-xl font-semibold mb-2">Founded</h3>
-                <p>{companyInfo.founded}</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 basis-full md:basis-[calc(50%-1rem)]">
                 <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
                 <p>{companyInfo.vision}</p>
               </div>

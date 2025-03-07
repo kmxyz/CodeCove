@@ -7,7 +7,7 @@ import { AiOutlineDeploymentUnit } from "react-icons/ai";
 
 export const companyInfo = {
   name: "CodeCove",
-  founded: "2020",
+
   mission:
     "To create innovative digital solutions that empower businesses to thrive in the digital landscape.",
   vision:

@@ -47,7 +47,7 @@ export const contactInfo = [
   {
     id: 1,
     icon: MdEmail,
-    text: "markapple666@gmail.com",
+    text: "codecove88@gmail.com",
     type: "email",
   },
 ];

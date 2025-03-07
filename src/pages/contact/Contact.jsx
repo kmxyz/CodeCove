@@ -63,9 +63,9 @@ const Contact = () => {
                     </h3>
                     <a
                       className="text-[var(--primary)]"
-                      href={`mailto:markapple666@gmail.com`}
+                      href={`mailto:codecove88@gmail.com`}
                     >
-                      markapple666@gmail.com
+                      codecove88@gmail.com
                     </a>
                   </div>
 
