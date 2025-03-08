@@ -176,19 +176,19 @@ const Contact = () => {
 
                 <div className="mt-8 flex space-x-6">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61573752639434"
                     className="text-[var(--primary)] hover:text-[var(--secondary)] text-2xl"
                   >
                     <FaFacebook />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/codecove88/"
                     className="text-[var(--primary)] hover:text-[var(--secondary)] text-2xl"
                   >
                     <FaInstagram />
                   </a>
                   <a
-                    href="#"
+                    href="https://x.com/covecode?s=21"
                     className="text-[var(--primary)] hover:text-[var(--secondary)] text-2xl"
                   >
                     <FaTwitter />

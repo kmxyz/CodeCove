@@ -9,11 +9,16 @@ import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
 // Social Media Links
 export const socialLinks = [
-  { id: 1, icon: FaTwitter, url: "https://twitter.com", ariaLabel: "Twitter" },
+  {
+    id: 1,
+    icon: FaTwitter,
+    url: "https://x.com/covecode?s=21",
+    ariaLabel: "Twitter",
+  },
   {
     id: 2,
     icon: FaFacebook,
-    url: "https://facebook.com",
+    url: "https://www.facebook.com/profile.php?id=61573752639434",
     ariaLabel: "Facebook",
   },
   {
