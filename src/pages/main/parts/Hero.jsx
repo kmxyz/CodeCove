@@ -31,7 +31,7 @@ const Hero = () => {
           </h1>
           <p className="text-gray-700 mb-8 max-w-lg">
             Your small business deserves a digital presence that's modern,
-            affordable, and built to grow with you. At WebApp, we design
+            affordable, and built to grow with you. At CodeCove, we design
             websites and apps that turn visitors into customers—without the
             complexity or sky-high costs.
           </p>
